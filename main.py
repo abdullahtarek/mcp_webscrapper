@@ -51,12 +51,3 @@ if __name__ == "__main__":
     mcp.run()
 
 
-# Prompt
-# Can you scrape the full text of this article 
-# https://www.npr.org/2025/05/19/nx-s1-5366820/5-eating-habits-that-can-improve-sleep
-# The div that has the article text is storytext
-
-# Do not summarize, just output the raw extracted text 
-
-# Command 
-# uv run mcp install -e. main.py
