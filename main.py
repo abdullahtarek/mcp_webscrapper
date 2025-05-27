@@ -4,6 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
+# Decodo API Token (Get your API token from https://visit.decodo.com/aOL4yR)
+decodo_token = "VTAwMDAyNjc0Mzk6T3lkc19haU4yTTVucjIwd2pG"
 
 # Create MCP server
 mcp = FastMCP("DecodoWebsiteScrapper")
@@ -22,7 +24,7 @@ def get_article_text(website_url:str, div_id: str) -> str:
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": "Basic VTAwMDAyNjc0Mzk6T3lkc19haU4yTTVucjIwd2pG"
+        "authorization": "Basic " + decodo_token
     }
     crawled_article = requests.post(url, json=payload, headers=headers)
     crawled_article_json = json.loads(crawled_article.text)
@@ -55,3 +57,6 @@ if __name__ == "__main__":
 # The div that has the article text is storytext
 
 # Do not summarize, just output the raw extracted text 
+
+# Command 
+# uv run mcp install -e. main.py
