@@ -1,0 +1,12 @@
+[project]
+name = "decodo-webscrapper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "mcp[cli]>=1.9.1",
+    "pandas>=2.2.3",
+    "requests>=2.32.3",
+]
